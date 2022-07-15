@@ -1,1 +1,1 @@
-# M&D2CKAN
+# M-D2CKAN
