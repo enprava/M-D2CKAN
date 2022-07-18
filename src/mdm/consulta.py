@@ -8,11 +8,10 @@ class Consulta:
     def __init__(self, consultas):
         if not consultas['Consultas']:
 
-            peticion = requests.get("http://192.168.1.123/sdmx_172/NODE_API/dataflow")
+            requests.get("http://192.168.1.123/sdmx_172/NODE_API/dataflow")
 
         else:
-            list = []
-            for id in consultas['Consulta']:
-                list.append(
-                    requests.get("http://192.168.1.123/sdmx_172/NODE_API/dataflow/{}/{}/{}".format(id[0], id[1]),
-                                 id[2]))
+            lista = []
+            for ids in consultas['Consulta']:
+                lista.append(
+                    requests.get(f'http://192.168.1.123/sdmx_172/NODE_API/dataflow/{ids[0]}/{ids[1]}/{ids[2]}').headers)
