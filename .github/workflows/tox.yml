@@ -23,12 +23,11 @@ jobs:
         pip install tox tox-gh-actions
         sudo apt-get install python3-sphinx
         pip install sphinx_rtd_theme
-
     - name: Test with tox
       run: tox
 
-    - - name: Codecov
-        uses: codecov/codecov-action@v3.1.0
+    - name: "Upload coverage to Codecov"
+      uses: codecov/codecov-action@v3.1.0
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         fail_ci_if_error: true
