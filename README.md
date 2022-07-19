@@ -36,7 +36,7 @@ Sus comandos son los siguientes:
 
 ### Ejecutar tests
 
-    tox -e py10
+    tox -e py310
 
 ### Ejecutar Lint
 
